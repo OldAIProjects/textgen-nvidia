@@ -1,4 +1,4 @@
-name: Publish Docker image for multiple CUDA architectures (Runs daily 1am EST)
+name: Publish Docker image for multiple CUDA architectures - Runs daily 1AM EST
 
 on:
   push:
@@ -47,7 +47,7 @@ jobs:
         uses: docker/build-push-action@v4.1.1
         with:
           context: .
-          file: ./docker/Dockerfile
+          file: ./Dockerfile
           push: true
           build-args: TORCH_CUDA_ARCH_LIST=${{ matrix.arch }}
           tags: ${{ vars.DOCKERHUB_USERNAME }}/textgen-nvidia-${{ matrix.arch }}:latest
