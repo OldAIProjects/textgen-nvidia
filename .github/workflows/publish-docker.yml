@@ -1,4 +1,4 @@
-name: Publish Docker image for multiple CUDA architectures
+name: Publish Docker image for multiple CUDA architectures (Runs daily 1am EST)
 
 on:
   push:
